@@ -1,0 +1,23 @@
+version: 4.1.32
+steps:
+  - prompt: Locate the "Contact Us" link on the homepage.
+    commands:
+      - command: scroll-until-text
+        text: Contact Us
+        direction: down
+  - prompt: Click on the "Contact Us" link.
+    commands:
+      - command: hover-text
+        text: Contactez-nous
+        description: contact us link under NOTRE SOCIÉTÉ section
+        action: click
+  - prompt: Assert that the contact page loads without issues.
+    commands:
+      - command: assert
+        expect: the contact page displays "CONTACTEZ-NOUS"
+  - prompt: >-
+      Assert that the contact information or form is clearly visible.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the contact form and information are visible on the page
