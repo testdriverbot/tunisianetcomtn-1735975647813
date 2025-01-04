@@ -1,0 +1,10 @@
+version: 4.1.32
+steps:
+  - prompt: Locate the search bar on the website.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Search or type a URL
+        description: main search bar in the browser
+        action: click
